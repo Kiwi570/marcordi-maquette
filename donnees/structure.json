@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "marcordi",
+  "description": "Aidant numérique : installation, assistance et dépannage informatique (Windows et macOS) et multimédia (smartphone, TV, box), accompagnement aux démarches administratives en ligne. Intervention à distance, à domicile ou en tiers-lieu.",
+  "url": "https://marcordi-maquette.vercel.app/",
+  "telephone": "+33683615598",
+  "email": "marco@marcordi.fr",
+  "founder": { "@type": "Person", "name": "Marco Hubin" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Marigny-Marmande", "postalCode": "37120", "addressRegion": "Indre-et-Loire", "addressCountry": "FR" },
+  "areaServed": { "@type": "GeoCircle", "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 46.977, "longitude": 0.4811 }, "geoRadius": "25000" },
+  "knowsLanguage": ["fr", "en"],
+  "sameAs": ["https://www.instagram.com/marcordi.fr/", "https://www.facebook.com/marcordi.fr/", "https://www.linkedin.com/company/marcordi/"]
+}

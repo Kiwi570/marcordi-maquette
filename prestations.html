@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-gabarit="prestations" data-page="prestations" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prestations : marcordi, aidant numérique</title>
+<meta name="description" content="Prise en main, nettoyage, réparation, mise à jour, récupération de données, multimédia, CV, démarches en ligne, rédaction : la liste des prestations de marcordi.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://marcordi-maquette.vercel.app/prestations">
+<style>:root{--fond:#F3EEE4;--texte:#1D2125;--voile-fond:#1D2125;--ouverture-fond:#F3EEE4;--menu-fond:#F3EEE4}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/fraunces-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#F3EEE4">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="marcordi">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Prestations : marcordi, aidant numérique">
+<meta property="og:description" content="Prise en main, nettoyage, réparation, mise à jour, récupération de données, multimédia, CV, démarches en ligne, rédaction : la liste des prestations de marcordi.">
+<meta property="og:url" content="https://marcordi-maquette.vercel.app/prestations">
+<meta property="og:image" content="https://marcordi-maquette.vercel.app/assets/partage/prestations-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Prestations de marcordi : établi avec ordinateur, câbles et clé USB">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"marcordi","description":"Aidant numérique : installation, assistance et dépannage informatique (Windows et macOS) et multimédia (smartphone, TV, box), accompagnement aux démarches administratives en ligne. Intervention à distance, à domicile ou en tiers-lieu.","url":"https://marcordi-maquette.vercel.app/","telephone":"+33683615598","email":"marco@marcordi.fr","founder":{"@type":"Person","name":"Marco Hubin"},"address":{"@type":"PostalAddress","addressLocality":"Marigny-Marmande","postalCode":"37120","addressRegion":"Indre-et-Loire","addressCountry":"FR"},"areaServed":{"@type":"GeoCircle","geoMidpoint":{"@type":"GeoCoordinates","latitude":46.977,"longitude":0.4811},"geoRadius":"25000"},"knowsLanguage":["fr","en"],"sameAs":["https://www.instagram.com/marcordi.fr/","https://www.facebook.com/marcordi.fr/","https://www.linkedin.com/company/marcordi/"]}</script>
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu">
+  <svg class="voile-cable" viewBox="0 0 400 40" preserveAspectRatio="none" focusable="false"><path d="M0 20 C 90 20 110 34 170 34 S 250 20 300 20 H 400"/></svg>
+  <img src="/assets/images/logo-clair.svg" alt="" width="395" height="112"><span data-voile-libelle>Prestations</span></div></div>
+<div class="ouverture-panneau" data-ouverture data-gouttiere="#F3EEE4" aria-hidden="true">
+  <div class="intro-fond"></div>
+  <div class="intro-scene"><svg class="intro-svg" viewBox="-152.0 -89.0 694.8 168.2" data-marc-fin="220.5" data-ordi-debut="225" data-mot="-2 -73 394.8 76.2" data-vb="-152.0 -89.0 694.8 168.2" aria-hidden="true" focusable="false">
+<path class="intro-cable" d="" fill="none"/>
+<g class="intro-marc"><path d="M7.5 0V-50H13.1L13.4 -42.8Q15.7 -46.9 19.4 -49.1Q23 -51.2 27.9 -51.2Q33.8 -51.2 38.1 -48.4Q42.4 -45.5 44.3 -39.6Q46.4 -45.2 50.5 -48.2Q54.5 -51.2 60.3 -51.2Q68.5 -51.2 73.5 -45.6Q78.4 -40 78.3 -28.6V0H72.3V-25.6Q72.3 -33.9 70.5 -38.2Q68.8 -42.5 65.9 -44Q63 -45.6 59.3 -45.6Q53 -45.6 49.5 -40.4Q45.9 -35.1 45.9 -25.7V0H39.9V-25.6Q39.9 -33.9 38.2 -38.2Q36.4 -42.5 33.5 -44Q30.6 -45.6 26.9 -45.6Q20.6 -45.6 17.1 -40.4Q13.5 -35.1 13.5 -25.7V0ZM107.5 1.2Q98.7 1.2 93.8 -2.9Q88.8 -6.9 88.8 -14.1Q88.8 -21.5 93.8 -25.6Q98.7 -29.7 107.5 -29.7H122.3Q121.9 -37.7 118.6 -41.7Q115.3 -45.7 108.5 -45.7Q104 -45.7 101 -43.9Q97.9 -42.1 95.9 -38.3L90.5 -40.7Q92.6 -44.3 95.2 -46.6Q97.9 -48.9 101.2 -50.1Q104.5 -51.2 108.5 -51.2Q115.2 -51.2 119.6 -48.5Q124 -45.8 126.2 -40.4Q128.4 -35 128.4 -26.8V0H122.9L122.4 -7Q120.1 -3.1 116.3 -0.9Q112.5 1.2 107.5 1.2ZM107.1 -4.3Q111.9 -4.3 115.4 -6.2Q118.8 -8.2 120.6 -12Q122.4 -15.8 122.4 -21.4V-24.2H108.3Q101.1 -24.2 98 -21.6Q94.8 -18.9 94.8 -14.1Q94.8 -9.5 98.1 -6.9Q101.3 -4.3 107.1 -4.3ZM141.9 0V-50H147.9V-41.2Q150.8 -45.9 155.6 -48.1Q160.4 -50.2 165.6 -50.2V-44.7Q161.2 -44.7 157.2 -43.2Q153.1 -41.6 150.5 -38Q147.9 -34.3 147.9 -28V0ZM195.7 1.2Q188.5 1.2 183 -2.1Q177.4 -5.5 174.3 -11.4Q171.1 -17.3 171.1 -25Q171.1 -32.7 174.2 -38.6Q177.3 -44.5 182.9 -47.9Q188.4 -51.2 195.5 -51.2Q202.6 -51.2 208.1 -48.1Q213.6 -44.9 216.6 -39.3L211.4 -36.5Q209.1 -40.8 205 -43.2Q200.8 -45.7 195.5 -45.7Q190.1 -45.7 186 -43.1Q181.8 -40.4 179.5 -35.8Q177.1 -31.1 177.1 -25Q177.1 -18.9 179.5 -14.3Q181.9 -9.6 186.1 -7Q190.3 -4.3 195.7 -4.3Q201.1 -4.3 205.3 -7.1Q209.5 -9.8 211.7 -14.7L217 -11.9Q214 -5.8 208.5 -2.3Q202.9 1.2 195.7 1.2Z"/></g>
+<g class="intro-ordi"><path d="M249.6 1.2Q242.4 1.2 236.9 -2.1Q231.3 -5.5 228.2 -11.4Q225 -17.3 225 -25Q225 -32.7 228.1 -38.6Q231.2 -44.5 236.8 -47.9Q242.3 -51.2 249.4 -51.2Q256.6 -51.2 262.1 -47.9Q267.7 -44.5 270.8 -38.6Q273.9 -32.7 273.9 -25Q273.9 -17.3 270.8 -11.4Q267.7 -5.5 262.2 -2.1Q256.7 1.2 249.6 1.2ZM249.6 -4.3Q255 -4.3 259.1 -7Q263.2 -9.6 265.5 -14.3Q267.9 -18.9 267.9 -25Q267.9 -31.1 265.5 -35.8Q263.2 -40.4 259 -43.1Q254.8 -45.7 249.4 -45.7Q244 -45.7 239.8 -43.1Q235.7 -40.4 233.3 -35.8Q231 -31.1 231 -25Q231 -18.9 233.4 -14.3Q235.8 -9.6 240 -7Q244.2 -4.3 249.6 -4.3ZM285.9 0V-50H291.9V-41.2Q294.8 -45.9 299.6 -48.1Q304.4 -50.2 309.6 -50.2V-44.7Q305.2 -44.7 301.1 -43.2Q297.1 -41.6 294.5 -38Q291.9 -34.3 291.9 -28V0ZM337.7 1.2Q331.1 1.2 326 -2.1Q320.9 -5.5 318 -11.5Q315.1 -17.4 315.1 -25Q315.1 -32.7 318 -38.6Q320.9 -44.5 326 -47.9Q331.1 -51.2 337.7 -51.2Q343.4 -51.2 347.9 -48.5Q352.5 -45.7 355.3 -40.9V-70H361.3V0H355.6L355.3 -9.1Q352.5 -4.3 347.9 -1.5Q343.4 1.2 337.7 1.2ZM338.9 -4.2Q343.7 -4.2 347.4 -6.8Q351.1 -9.5 353.2 -14.2Q355.3 -18.9 355.3 -24.9V-25Q355.3 -31.1 353.2 -35.8Q351.1 -40.5 347.4 -43.2Q343.7 -45.8 338.8 -45.8Q333.6 -45.8 329.6 -43.2Q325.6 -40.5 323.3 -35.8Q321.1 -31.1 321.1 -25Q321.1 -18.9 323.4 -14.2Q325.7 -9.5 329.7 -6.8Q333.7 -4.2 338.9 -4.2ZM376.7 0V-50H382.7V0ZM379.8 -63Q378.2 -63 377 -64.2Q375.8 -65.4 375.8 -67Q375.8 -68.7 377 -69.8Q378.2 -71 379.8 -71Q381.5 -71 382.6 -69.8Q383.8 -68.7 383.8 -67Q383.8 -65.4 382.6 -64.2Q381.5 -63 379.8 -63Z"/></g>
+<g class="intro-prise"><rect x="-12" y="-7" width="13" height="14" rx="3"/><path d="M1 -3.4h6M1 3.4h6" fill="none"/></g>
+<g class="intro-etincelle" data-ephemere><path d="M0 -12v-9M9 -9l6 -6M-9 -9l-6 -6M12 0h8M-12 0h-8" fill="none"/></g>
+</svg><svg class="intro-tag-svg" viewBox="-152.0 -89.0 694.8 168.2" aria-hidden="true" focusable="false"><g class="intro-tag"><path d="M87.4 29.2 94.9 10.6H97.3L104.8 29.2H102.5L100.3 23.9H91.9L89.8 29.2ZM92.7 21.9H99.5L96.1 13.5ZM107.1 29.2V15.9H109.2V29.2ZM108.2 12.9Q107.6 12.9 107.2 12.5Q106.8 12.1 106.8 11.6Q106.8 11 107.2 10.6Q107.6 10.2 108.2 10.2Q108.7 10.2 109.1 10.6Q109.5 11 109.5 11.6Q109.5 12.1 109.1 12.5Q108.7 12.9 108.2 12.9ZM118.3 29.5Q116.5 29.5 115.2 28.6Q113.8 27.8 113.1 26.2Q112.3 24.6 112.3 22.6Q112.3 20.5 113.1 18.9Q113.8 17.4 115.2 16.5Q116.5 15.6 118.3 15.6Q119.8 15.6 120.9 16.3Q122.1 17 122.8 18.2V10.6H124.9V29.2H122.9L122.8 26.9Q122.1 28.1 120.9 28.8Q119.8 29.5 118.3 29.5ZM118.8 27.6Q120 27.6 120.8 27Q121.7 26.3 122.2 25.2Q122.8 24.1 122.8 22.7V22.5Q122.8 21.1 122.2 19.9Q121.7 18.8 120.8 18.2Q119.9 17.6 118.8 17.6Q117.5 17.6 116.5 18.2Q115.6 18.8 115 20Q114.5 21.1 114.5 22.6Q114.5 24 115 25.2Q115.6 26.3 116.6 26.9Q117.5 27.6 118.8 27.6ZM132.8 29.5Q130.5 29.5 129.2 28.4Q127.9 27.4 127.9 25.5Q127.9 23.4 129.2 22.4Q130.5 21.3 132.9 21.3H136.6Q136.5 19.4 135.7 18.5Q134.9 17.5 133.3 17.5Q132.2 17.5 131.4 18Q130.7 18.4 130.2 19.4L128.3 18.6Q128.8 17.7 129.5 17Q130.2 16.3 131.1 16Q132.1 15.6 133.3 15.6Q135.2 15.6 136.4 16.4Q137.6 17.1 138.2 18.5Q138.8 19.9 138.8 22L138.7 29.2H136.8L136.7 27.4Q136.1 28.4 135.1 29Q134.1 29.5 132.8 29.5ZM132.9 27.7Q134.1 27.7 134.9 27.2Q135.8 26.7 136.2 25.8Q136.7 24.9 136.7 23.6V23.1H133.4Q131.6 23.1 130.8 23.7Q130 24.3 130 25.4Q130 26.5 130.8 27.1Q131.5 27.7 132.9 27.7ZM142.1 29.2V15.9H144.1L144.2 17.9Q144.9 16.8 146 16.2Q147 15.6 148.4 15.6Q150 15.6 151.1 16.3Q152.3 16.9 152.9 18.2Q153.6 19.6 153.6 21.8V29.2H151.4V22.4Q151.4 20.5 151 19.4Q150.5 18.4 149.7 18Q148.9 17.6 147.9 17.6Q146.2 17.6 145.2 18.9Q144.3 20.1 144.3 22.3V29.2ZM161.9 29.5Q160 29.5 158.9 28.5Q157.9 27.5 157.9 25.7V17.8H155.5V15.9H157.9V11.8H160V15.9H163.9V17.8H160V25.5Q160 26.5 160.5 27Q161.1 27.6 162 27.6Q162.4 27.6 162.7 27.5Q163 27.4 163.5 27L164.3 28.7Q163.6 29.2 163 29.3Q162.5 29.5 161.9 29.5ZM174.1 29.2V10.6H176.4L187.4 25.5V10.6H189.7V29.2H187.4L176.3 14.2V29.2ZM198.8 29.5Q197.3 29.5 196.1 28.9Q195 28.3 194.3 26.9Q193.7 25.5 193.7 23.4V15.9H195.8V22.7Q195.8 24.7 196.2 25.7Q196.7 26.8 197.5 27.1Q198.3 27.5 199.3 27.5Q201 27.5 202 26.3Q203 25 203 22.8V15.9H205.1V29.2H203.1L203 27.2Q202.3 28.3 201.3 28.9Q200.2 29.5 198.8 29.5ZM208.8 29.2V15.9H210.8L210.9 17.8Q211.5 16.7 212.4 16.2Q213.4 15.6 214.7 15.6Q216.3 15.6 217.4 16.4Q218.5 17.1 219 18.6Q219.6 17.2 220.6 16.4Q221.7 15.6 223.2 15.6Q225.4 15.6 226.7 17.1Q228 18.6 228 21.6V29.2H225.9V22.4Q225.9 20.5 225.4 19.4Q225 18.4 224.3 18Q223.7 17.6 222.8 17.6Q221.2 17.6 220.3 18.9Q219.4 20.1 219.4 22.3V29.2H217.3V22.4Q217.3 20.5 216.9 19.4Q216.5 18.4 215.8 18Q215.1 17.6 214.2 17.6Q212.7 17.6 211.8 18.9Q210.9 20.1 210.9 22.3V29.2ZM237.1 29.5Q235.2 29.5 233.7 28.6Q232.2 27.7 231.4 26.2Q230.6 24.6 230.6 22.6Q230.6 20.5 231.4 19Q232.2 17.4 233.7 16.5Q235.2 15.6 237.1 15.6Q238.9 15.6 240.3 16.5Q241.6 17.5 242.4 19.1Q243.1 20.7 243.1 23H232.7Q232.8 25.1 234.1 26.4Q235.3 27.6 237.2 27.6Q238.7 27.6 239.6 26.9Q240.6 26.3 241.1 25.2L242.9 26.1Q242.4 27.1 241.6 27.9Q240.8 28.7 239.6 29.1Q238.5 29.5 237.1 29.5ZM232.9 21.2H240.9Q240.8 20.1 240.3 19.2Q239.7 18.4 238.9 18Q238.1 17.5 237.1 17.5Q236.1 17.5 235.1 18Q234.2 18.4 233.6 19.2Q233 20.1 232.9 21.2ZM235.3 14.1 238.4 10.6H241.1L237.7 14.1ZM245.8 29.2V15.9H248V18.3Q248.7 17.1 250 16.5Q251.3 15.9 252.6 15.9V17.9Q251.5 17.9 250.4 18.3Q249.3 18.7 248.6 19.5Q248 20.4 248 21.9V29.2ZM254.9 29.2V15.9H257V29.2ZM256 12.9Q255.5 12.9 255.1 12.5Q254.7 12.1 254.7 11.6Q254.7 11 255.1 10.6Q255.5 10.2 256 10.2Q256.6 10.2 256.9 10.6Q257.3 11 257.3 11.6Q257.3 12.1 256.9 12.5Q256.6 12.9 256 12.9ZM270.6 34.5V27Q269.9 28.2 268.8 28.8Q267.6 29.5 266.2 29.5Q264.4 29.5 263 28.6Q261.7 27.8 260.9 26.2Q260.2 24.6 260.2 22.6Q260.2 20.5 260.9 18.9Q261.7 17.4 263 16.5Q264.4 15.6 266.2 15.6Q267.6 15.6 268.8 16.3Q269.9 17 270.6 18.2L270.7 15.9H272.8V34.5ZM266.6 27.6Q267.8 27.6 268.7 26.9Q269.6 26.3 270.1 25.2Q270.6 24 270.6 22.6Q270.6 21.1 270.1 20Q269.6 18.8 268.7 18.2Q267.8 17.6 266.6 17.6Q265.4 17.6 264.4 18.2Q263.4 18.8 262.9 20Q262.3 21.1 262.3 22.6Q262.3 24 262.9 25.2Q263.4 26.3 264.4 26.9Q265.4 27.6 266.6 27.6ZM281.1 29.5Q279.5 29.5 278.4 28.9Q277.2 28.3 276.6 26.9Q275.9 25.5 275.9 23.4V15.9H278V22.7Q278 24.7 278.5 25.7Q278.9 26.8 279.7 27.1Q280.5 27.5 281.6 27.5Q283.3 27.5 284.2 26.3Q285.2 25 285.2 22.8V15.9H287.3V29.2H285.3L285.2 27.2Q284.6 28.3 283.5 28.9Q282.5 29.5 281.1 29.5ZM296.8 29.5Q294.9 29.5 293.4 28.6Q291.9 27.7 291.1 26.2Q290.3 24.6 290.3 22.6Q290.3 20.5 291.1 19Q291.9 17.4 293.4 16.5Q294.9 15.6 296.8 15.6Q298.6 15.6 300 16.5Q301.3 17.5 302.1 19.1Q302.8 20.7 302.8 23H292.4Q292.6 25.1 293.8 26.4Q295 27.6 297 27.6Q298.4 27.6 299.3 26.9Q300.3 26.3 300.8 25.2L302.6 26.1Q302.1 27.1 301.3 27.9Q300.5 28.7 299.3 29.1Q298.2 29.5 296.8 29.5ZM292.6 21.2H300.6Q300.5 20.1 300 19.2Q299.4 18.4 298.6 18Q297.8 17.5 296.8 17.5Q295.8 17.5 294.8 18Q293.9 18.4 293.3 19.2Q292.7 20.1 292.6 21.2Z"/></g></svg></div>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" aria-label="marcordi, aidant numérique : accueil" data-libelle="Accueil">
+      <svg class="logo-mot" viewBox="-2.0 -73.0 394.8 76.2" role="img" aria-label="marcordi, aidant numérique : accueil"><path class="logo-marc" d="M7.5 0V-50H13.1L13.4 -42.8Q15.7 -46.9 19.4 -49.1Q23 -51.2 27.9 -51.2Q33.8 -51.2 38.1 -48.4Q42.4 -45.5 44.3 -39.6Q46.4 -45.2 50.5 -48.2Q54.5 -51.2 60.3 -51.2Q68.5 -51.2 73.5 -45.6Q78.4 -40 78.3 -28.6V0H72.3V-25.6Q72.3 -33.9 70.5 -38.2Q68.8 -42.5 65.9 -44Q63 -45.6 59.3 -45.6Q53 -45.6 49.5 -40.4Q45.9 -35.1 45.9 -25.7V0H39.9V-25.6Q39.9 -33.9 38.2 -38.2Q36.4 -42.5 33.5 -44Q30.6 -45.6 26.9 -45.6Q20.6 -45.6 17.1 -40.4Q13.5 -35.1 13.5 -25.7V0ZM107.5 1.2Q98.7 1.2 93.8 -2.9Q88.8 -6.9 88.8 -14.1Q88.8 -21.5 93.8 -25.6Q98.7 -29.7 107.5 -29.7H122.3Q121.9 -37.7 118.6 -41.7Q115.3 -45.7 108.5 -45.7Q104 -45.7 101 -43.9Q97.9 -42.1 95.9 -38.3L90.5 -40.7Q92.6 -44.3 95.2 -46.6Q97.9 -48.9 101.2 -50.1Q104.5 -51.2 108.5 -51.2Q115.2 -51.2 119.6 -48.5Q124 -45.8 126.2 -40.4Q128.4 -35 128.4 -26.8V0H122.9L122.4 -7Q120.1 -3.1 116.3 -0.9Q112.5 1.2 107.5 1.2ZM107.1 -4.3Q111.9 -4.3 115.4 -6.2Q118.8 -8.2 120.6 -12Q122.4 -15.8 122.4 -21.4V-24.2H108.3Q101.1 -24.2 98 -21.6Q94.8 -18.9 94.8 -14.1Q94.8 -9.5 98.1 -6.9Q101.3 -4.3 107.1 -4.3ZM141.9 0V-50H147.9V-41.2Q150.8 -45.9 155.6 -48.1Q160.4 -50.2 165.6 -50.2V-44.7Q161.2 -44.7 157.2 -43.2Q153.1 -41.6 150.5 -38Q147.9 -34.3 147.9 -28V0ZM195.7 1.2Q188.5 1.2 183 -2.1Q177.4 -5.5 174.3 -11.4Q171.1 -17.3 171.1 -25Q171.1 -32.7 174.2 -38.6Q177.3 -44.5 182.9 -47.9Q188.4 -51.2 195.5 -51.2Q202.6 -51.2 208.1 -48.1Q213.6 -44.9 216.6 -39.3L211.4 -36.5Q209.1 -40.8 205 -43.2Q200.8 -45.7 195.5 -45.7Q190.1 -45.7 186 -43.1Q181.8 -40.4 179.5 -35.8Q177.1 -31.1 177.1 -25Q177.1 -18.9 179.5 -14.3Q181.9 -9.6 186.1 -7Q190.3 -4.3 195.7 -4.3Q201.1 -4.3 205.3 -7.1Q209.5 -9.8 211.7 -14.7L217 -11.9Q214 -5.8 208.5 -2.3Q202.9 1.2 195.7 1.2Z"/><path class="logo-ordi" d="M249.6 1.2Q242.4 1.2 236.9 -2.1Q231.3 -5.5 228.2 -11.4Q225 -17.3 225 -25Q225 -32.7 228.1 -38.6Q231.2 -44.5 236.8 -47.9Q242.3 -51.2 249.4 -51.2Q256.6 -51.2 262.1 -47.9Q267.7 -44.5 270.8 -38.6Q273.9 -32.7 273.9 -25Q273.9 -17.3 270.8 -11.4Q267.7 -5.5 262.2 -2.1Q256.7 1.2 249.6 1.2ZM249.6 -4.3Q255 -4.3 259.1 -7Q263.2 -9.6 265.5 -14.3Q267.9 -18.9 267.9 -25Q267.9 -31.1 265.5 -35.8Q263.2 -40.4 259 -43.1Q254.8 -45.7 249.4 -45.7Q244 -45.7 239.8 -43.1Q235.7 -40.4 233.3 -35.8Q231 -31.1 231 -25Q231 -18.9 233.4 -14.3Q235.8 -9.6 240 -7Q244.2 -4.3 249.6 -4.3ZM285.9 0V-50H291.9V-41.2Q294.8 -45.9 299.6 -48.1Q304.4 -50.2 309.6 -50.2V-44.7Q305.2 -44.7 301.1 -43.2Q297.1 -41.6 294.5 -38Q291.9 -34.3 291.9 -28V0ZM337.7 1.2Q331.1 1.2 326 -2.1Q320.9 -5.5 318 -11.5Q315.1 -17.4 315.1 -25Q315.1 -32.7 318 -38.6Q320.9 -44.5 326 -47.9Q331.1 -51.2 337.7 -51.2Q343.4 -51.2 347.9 -48.5Q352.5 -45.7 355.3 -40.9V-70H361.3V0H355.6L355.3 -9.1Q352.5 -4.3 347.9 -1.5Q343.4 1.2 337.7 1.2ZM338.9 -4.2Q343.7 -4.2 347.4 -6.8Q351.1 -9.5 353.2 -14.2Q355.3 -18.9 355.3 -24.9V-25Q355.3 -31.1 353.2 -35.8Q351.1 -40.5 347.4 -43.2Q343.7 -45.8 338.8 -45.8Q333.6 -45.8 329.6 -43.2Q325.6 -40.5 323.3 -35.8Q321.1 -31.1 321.1 -25Q321.1 -18.9 323.4 -14.2Q325.7 -9.5 329.7 -6.8Q333.7 -4.2 338.9 -4.2ZM376.7 0V-50H382.7V0ZM379.8 -63Q378.2 -63 377 -64.2Q375.8 -65.4 375.8 -67Q375.8 -68.7 377 -69.8Q378.2 -71 379.8 -71Q381.5 -71 382.6 -69.8Q383.8 -68.7 383.8 -67Q383.8 -65.4 382.6 -64.2Q381.5 -63 379.8 -63Z"/></svg>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/prestations" data-libelle="Prestations" aria-current="page">Prestations</a></li><li><a href="/tarifs" data-libelle="Tarifs">Tarifs</a></li><li><a href="/a-propos" data-libelle="À propos">À propos</a></li><li><a href="/rendez-vous" data-libelle="Rendez-⁠vous">Rendez-⁠vous</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton bouton--appel" href="tel:+33683615598" data-magnetique><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3h3l1.6 4.2-2 1.4a11 11 0 0 0 5.2 5.2l1.4-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3z"/></g></svg><span class="appel-court">Appeler</span><span class="appel-long">06 83 61 55 98</span></a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/prestations" class="menu-lien" data-libelle="Prestations" aria-current="page">Prestations</a></li><li style="--i:2"><a href="/tarifs" class="menu-lien" data-libelle="Tarifs">Tarifs</a></li><li style="--i:3"><a href="/a-propos" class="menu-lien" data-libelle="À propos">À propos</a></li><li style="--i:4"><a href="/rendez-vous" class="menu-lien" data-libelle="Rendez-⁠vous">Rendez-⁠vous</a></li></ul>
+    <div class="menu-contact">
+      <p class="menu-titre">Joindre Marco</p>
+      <p><a class="bouton" href="tel:+33683615598"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3h3l1.6 4.2-2 1.4a11 11 0 0 0 5.2 5.2l1.4-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3z"/></g></svg><span>06 83 61 55 98</span></a></p>
+      <p><a class="lien-fil" href="mailto:marco@marcordi.fr">marco@marcordi.fr</a></p>
+      <p>Chez vous dans un rayon de 25 km autour de Marigny-⁠Marmande, ou à distance.</p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<main id="contenu" tabindex="-1">
+<svg class="fil" data-fil aria-hidden="true" focusable="false" data-audit-ignorer><path class="fil-fond" d=""/><path class="fil-trace" d=""/><circle class="fil-tete" r="5" cx="-20" cy="-20"/></svg>
+<section class="page-tete" id="debut">
+  <figure class="media tete-media" data-grok style="--cadrage:72% 60%;--cadrage-mobile:45% 72%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/prestations-ouverture-mobile-640.webp 640w, /assets/images/grok/prestations-ouverture-mobile-657.webp 657w" sizes="100vw">
+    <img src="/assets/images/grok/prestations-ouverture-1168.webp" srcset="/assets/images/grok/prestations-ouverture-640.webp 640w, /assets/images/grok/prestations-ouverture-1168.webp 1168w" sizes="100vw" alt="Établi en bois avec un ordinateur portable, des câbles, une clé USB et des tournevis de précision" width="1168" height="657" fetchpriority="high" loading="eager" decoding="sync">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="tete-degrade" aria-hidden="true"></div>
+  <div class="tete-texte conteneur">
+    <p class="surtitre"><span class="prise" data-prise="usb" aria-hidden="true"><svg viewBox="0 0 44 24" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="6" width="24" height="12" rx="6"/><rect x="19" y="10" width="14" height="4" rx="2"/><path d="M2 12h12"/></g><circle class="prise-voyant" cx="41" cy="12" r="2.2"/></svg></span><span>Prestations</span></p>
+    <h1 class="tete-titre"><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">Ce que je fais pour vous</span></span></h1>
+    <p class="tete-actions" data-anime="gsap">
+      <a href="/rendez-vous#demande" class="bouton" data-libelle="Rendez-⁠vous" data-action-principale data-magnetique>Demander un devis gratuit</a>
+      <a class="bouton bouton--contour" href="tel:+33683615598"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3h3l1.6 4.2-2 1.4a11 11 0 0 0 5.2 5.2l1.4-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3z"/></g></svg><span>06 83 61 55 98</span></a>
+    </p>
+    <p class="tete-info" data-info-cle data-anime="gsap">Windows et macOS · smartphone, TV, box · démarches en ligne</p>
+    <p class="tete-intro" data-anime="gsap">Voici une liste non exhaustive des prestations que je propose. Si votre besoin n’est pas référencé, n’hésitez pas à me contacter.</p>
+  </div>
+</section>
+<section class="catalogue" id="liste">
+  <div class="conteneur">
+    <p class="surtitre"><span class="prise" data-prise="hdmi" aria-hidden="true"><svg viewBox="0 0 44 24" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6h24v8l-4 4H18l-4-4z"/><path d="M19 10h14"/><path d="M2 12h12"/></g><circle class="prise-voyant" cx="41" cy="12" r="2.2"/></svg></span><span>La liste</span></p>
+    <h2 data-anime>Les prestations</h2>
+    <div class="filtres" role="group" aria-label="Filtrer les prestations" data-filtres>
+      <button type="button" class="puce" aria-pressed="true" data-filtre="tout">Tout voir <span class="puce-compte">10</span></button>
+      <button type="button" class="puce" aria-pressed="false" data-filtre="informatique">Informatique et multimédia <span class="puce-compte">5</span></button><button type="button" class="puce" aria-pressed="false" data-filtre="administratif">Administratif <span class="puce-compte">5</span></button>
+    </div>
+    <p class="filtres-compte" role="status" data-filtres-compte data-modele="{n} prestations affichées" data-modele-un="1 prestation affichée">10 prestations affichées</p>
+    <div class="catalogue-grille" data-catalogue>
+      <article class="prestation" id="prise-en-main" data-famille="informatique" data-incline>
+        <figure class="media prestation-media" data-grok style="--cadrage:60% 45%">
+  <picture>
+    <img src="/assets/images/grok/prestation-prise-en-main-784.webp" srcset="/assets/images/grok/prestation-prise-en-main-640.webp 640w, /assets/images/grok/prestation-prise-en-main-784.webp 784w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 30vw" alt="Mains qui sortent un smartphone neuf de sa boîte" width="784" height="980" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <div class="prestation-texte">
+          <p class="etiquette">Informatique et multimédia</p>
+          <h3>Prise en main d’un nouveau matériel</h3>
+          <p>Un nouvel ordinateur ou un nouveau smartphone : je vous accompagne pour le mettre en route et vous l’approprier.</p>
+          <p class="prestation-action"><a href="/rendez-vous?prestation=prise-en-main#demande" class="lien-fil lien-fort" data-libelle="Rendez-⁠vous">Demander cette prestation<svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></g></svg></a></p>
+        </div>
+      </article><article class="prestation" id="nettoyage" data-famille="informatique" data-incline>
+        <figure class="media prestation-media" data-grok style="--cadrage:55% 60%">
+  <picture>
+    <img src="/assets/images/grok/prestation-nettoyage-784.webp" srcset="/assets/images/grok/prestation-nettoyage-640.webp 640w, /assets/images/grok/prestation-nettoyage-784.webp 784w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 30vw" alt="Clavier d’ordinateur dépoussiéré au pinceau" width="784" height="980" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <div class="prestation-texte">
+          <p class="etiquette">Informatique et multimédia</p>
+          <h3>Nettoyage, sécurisation, optimisation, réparation</h3>
+          <p>Un appareil lent, encombré ou qui fait des siennes : je le nettoie, le sécurise, l’optimise et le répare.</p>
+          <p class="prestation-action"><a href="/rendez-vous?prestation=nettoyage#demande" class="lien-fil lien-fort" data-libelle="Rendez-⁠vous">Demander cette prestation<svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></g></svg></a></p>
+        </div>
+      </article><article class="prestation" id="installation" data-famille="informatique" data-incline>
+        <figure class="media prestation-media" data-grok style="--cadrage:55% 65%">
+  <picture>
+    <img src="/assets/images/grok/prestation-installation-784.webp" srcset="/assets/images/grok/prestation-installation-640.webp 640w, /assets/images/grok/prestation-installation-784.webp 784w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 30vw" alt="Mains sur le clavier d’un ordinateur portable, à la tombée du jour" width="784" height="980" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <div class="prestation-texte">
+          <p class="etiquette">Informatique et multimédia</p>
+          <h3>Installation, réinitialisation, mise à jour</h3>
+          <p>Système d’exploitation et logiciels internes des appareils (firmware), sur Windows comme sur macOS.</p>
+          <p class="prestation-action"><a href="/rendez-vous?prestation=installation#demande" class="lien-fil lien-fort" data-libelle="Rendez-⁠vous">Demander cette prestation<svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></g></svg></a></p>
+        </div>
+      </article><article class="prestation" id="recuperation" data-famille="informatique" data-incline>
+        <figure class="media prestation-media" data-grok style="--cadrage:55% 55%">
+  <picture>
+    <img src="/assets/images/grok/prestation-recuperation-784.webp" srcset="/assets/images/grok/prestation-recuperation-640.webp 640w, /assets/images/grok/prestation-recuperation-784.webp 784w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 30vw" alt="Disque dur externe et clé USB posés près d’une boîte en carton" width="784" height="980" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <div class="prestation-texte">
+          <p class="etiquette">Informatique et multimédia</p>
+          <h3>Récupération de données</h3>
+          <p>Photos, documents : je tente de récupérer vos fichiers. Le résultat dépend de l’état de l’appareil et ne peut pas être garanti.</p>
+          <p class="prestation-action"><a href="/rendez-vous?prestation=recuperation#demande" class="lien-fil lien-fort" data-libelle="Rendez-⁠vous">Demander cette prestation<svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></g></svg></a></p>
+        </div>
+      </article><article class="prestation" id="multimedia" data-famille="informatique" data-incline>
+        <figure class="media prestation-media" data-grok style="--cadrage:55% 60%">
+  <picture>
+    <img src="/assets/images/grok/prestation-tv-box-784.webp" srcset="/assets/images/grok/prestation-tv-box-640.webp 640w, /assets/images/grok/prestation-tv-box-784.webp 784w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 30vw" alt="Box internet et télécommande sur un meuble de télévision" width="784" height="980" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <div class="prestation-texte">
+          <p class="etiquette">Informatique et multimédia</p>
+          <h3>Multimédia : smartphone, TV, box</h3>
+          <p>Installation, assistance et dépannage de vos appareils multimédias : smartphone, télévision, box…</p>
+          <p class="prestation-action"><a href="/rendez-vous?prestation=multimedia#demande" class="lien-fil lien-fort" data-libelle="Rendez-⁠vous">Demander cette prestation<svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></g></svg></a></p>
+        </div>
+      </article><article class="prestation" id="cv" data-famille="administratif" data-incline>
+        <figure class="media prestation-media" data-grok style="--cadrage:55% 55%">
+  <picture>
+    <img src="/assets/images/grok/prestation-cv-784.webp" srcset="/assets/images/grok/prestation-cv-640.webp 640w, /assets/images/grok/prestation-cv-784.webp 784w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 30vw" alt="Feuille blanche, stylo et lunettes sur un bureau" width="784" height="980" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <div class="prestation-texte">
+          <p class="etiquette">Administratif</p>
+          <h3>Conception graphique de CV</h3>
+          <p>Un CV clair et soigné, mis en forme avec vous.</p>
+          <p class="prestation-action"><a href="/rendez-vous?prestation=cv#demande" class="lien-fil lien-fort" data-libelle="Rendez-⁠vous">Demander cette prestation<svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></g></svg></a></p>
+        </div>
+      </article><article class="prestation" id="demarches" data-famille="administratif" data-incline>
+        <figure class="media prestation-media" data-grok style="--cadrage:40% 60%">
+  <picture>
+    <img src="/assets/images/grok/prestation-demarches-784.webp" srcset="/assets/images/grok/prestation-demarches-640.webp 640w, /assets/images/grok/prestation-demarches-784.webp 784w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 30vw" alt="Lunettes posées sur un ordinateur fermé, près d’une tasse et d’enveloppes" width="784" height="980" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <div class="prestation-texte">
+          <p class="etiquette">Administratif</p>
+          <h3>Démarches administratives en ligne</h3>
+          <p>MSA, ameli, CAF, France Travail, ANTS, énergie, opérateurs téléphoniques… je vous accompagne dans vos démarches dématérialisées.</p>
+          <p class="prestation-action"><a href="/rendez-vous?prestation=demarches#demande" class="lien-fil lien-fort" data-libelle="Rendez-⁠vous">Demander cette prestation<svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></g></svg></a></p>
+        </div>
+      </article><article class="prestation" id="outils-collaboratifs" data-famille="administratif" data-incline>
+        <figure class="media prestation-media" data-grok style="--cadrage:45% 50%">
+  <picture>
+    <img src="/assets/images/grok/prestation-outils-collaboratifs-784.webp" srcset="/assets/images/grok/prestation-outils-collaboratifs-640.webp 640w, /assets/images/grok/prestation-outils-collaboratifs-784.webp 784w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 30vw" alt="Deux ordinateurs portables face à face sur une table de réunion" width="784" height="980" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <div class="prestation-texte">
+          <p class="etiquette">Administratif</p>
+          <h3>Assistance aux outils collaboratifs</h3>
+          <p>Je vous aide à prendre en main les outils pour travailler à plusieurs.</p>
+          <p class="prestation-action"><a href="/rendez-vous?prestation=outils-collaboratifs#demande" class="lien-fil lien-fort" data-libelle="Rendez-⁠vous">Demander cette prestation<svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></g></svg></a></p>
+        </div>
+      </article><article class="prestation" id="redaction" data-famille="administratif" data-incline>
+        <figure class="media prestation-media" data-grok style="--cadrage:40% 65%">
+  <picture>
+    <img src="/assets/images/grok/prestation-redaction-784.webp" srcset="/assets/images/grok/prestation-redaction-640.webp 640w, /assets/images/grok/prestation-redaction-784.webp 784w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 30vw" alt="Carnet ouvert et stylo plume près d’une tasse de thé" width="784" height="980" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <div class="prestation-texte">
+          <p class="etiquette">Administratif</p>
+          <h3>Aide à la rédaction</h3>
+          <p>Je vous aide à rédiger vos textes et vos courriers.</p>
+          <p class="prestation-action"><a href="/rendez-vous?prestation=redaction#demande" class="lien-fil lien-fort" data-libelle="Rendez-⁠vous">Demander cette prestation<svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></g></svg></a></p>
+        </div>
+      </article><article class="prestation" id="veille" data-famille="administratif" data-incline>
+        <figure class="media prestation-media" data-grok style="--cadrage:40% 60%">
+  <picture>
+    <img src="/assets/images/grok/prestation-veille-784.webp" srcset="/assets/images/grok/prestation-veille-640.webp 640w, /assets/images/grok/prestation-veille-784.webp 784w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 30vw" alt="Pile de livres et de journaux à côté d’une tablette" width="784" height="980" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <div class="prestation-texte">
+          <p class="etiquette">Administratif</p>
+          <h3>Veille documentaire et recherche d’information</h3>
+          <p>Trouver la bonne information et la garder à jour.</p>
+          <p class="prestation-action"><a href="/rendez-vous?prestation=veille#demande" class="lien-fil lien-fort" data-libelle="Rendez-⁠vous">Demander cette prestation<svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></g></svg></a></p>
+        </div>
+      </article>
+      <article class="prestation prestation--appel" data-tuile-appel>
+        <h3>Un doute sur la bonne prestation ?</h3>
+        <p>Appelez-⁠moi : on en parle avant, et le devis est gratuit.</p>
+        <p><a class="bouton bouton--clair" href="tel:+33683615598"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3h3l1.6 4.2-2 1.4a11 11 0 0 0 5.2 5.2l1.4-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3z"/></g></svg><span>Appeler Marco</span></a></p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="services" id="appareils">
+  <div class="conteneur services-grille">
+    <div class="services-texte">
+      <p class="surtitre"><span class="prise" data-prise="rj45" aria-hidden="true"><svg viewBox="0 0 44 24" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="4" width="22" height="16" rx="2"/><path d="M21 20v-4h8v4M19 8h12"/><path d="M2 12h12"/></g><circle class="prise-voyant" cx="41" cy="12" r="2.2"/></svg></span><span>Appareils et services</span></p>
+      <h2 data-anime>Vos appareils, vos démarches</h2>
+      <p data-anime>Sur ordinateur comme sur téléphone, et pour les démarches dématérialisées du quotidien.</p>
+      <h3>Appareils</h3>
+      <ul class="pastilles"><li>Ordinateur Windows</li><li>Ordinateur macOS</li><li>Smartphone</li><li>Télévision</li><li>Box internet</li></ul>
+      <h3>Démarches en ligne</h3>
+      <ul class="pastilles pastilles--cuivre"><li>MSA</li><li>ameli</li><li>CAF</li><li>France Travail</li><li>ANTS</li><li>Fournisseurs d’énergie</li><li>Opérateurs téléphoniques</li></ul>
+    </div>
+    <div class="services-visuel" data-visuel>
+      <svg viewBox="-160 -160 320 320" role="img" aria-label="Schéma : vos appareils et vos démarches reliés à un même fil" focusable="false">
+        <circle class="reseau-orbite" r="118"/>
+        <path class="reseau-lien reseau-lien--app" pathLength="1" style="--i:0" d="M0 0 Q-34.6 6.0 -102.2 -59.0"/><circle class="reseau-noeud reseau-noeud--app" cx="-102.2" cy="-59.0" r="7" style="--i:0"/><path class="reseau-lien reseau-lien--app" pathLength="1" style="--i:1" d="M0 0 Q-23.5 -6.4 -69.4 -95.5"/><circle class="reseau-noeud reseau-noeud--app" cx="-69.4" cy="-95.5" r="7" style="--i:1"/><path class="reseau-lien reseau-lien--app" pathLength="1" style="--i:2" d="M0 0 Q-8.3 -13.1 -24.5 -115.4"/><circle class="reseau-noeud reseau-noeud--app" cx="-24.5" cy="-115.4" r="7" style="--i:2"/><path class="reseau-lien reseau-lien--app" pathLength="1" style="--i:3" d="M0 0 Q8.3 -13.1 24.5 -115.4"/><circle class="reseau-noeud reseau-noeud--app" cx="24.5" cy="-115.4" r="7" style="--i:3"/><path class="reseau-lien reseau-lien--app" pathLength="1" style="--i:4" d="M0 0 Q23.5 -6.4 69.4 -95.5"/><circle class="reseau-noeud reseau-noeud--app" cx="69.4" cy="-95.5" r="7" style="--i:4"/><path class="reseau-lien reseau-lien--org" pathLength="1" style="--i:5" d="M0 0 Q37.1 41.0 109.4 44.2"/><circle class="reseau-noeud reseau-noeud--org" cx="109.4" cy="44.2" r="7" style="--i:5"/><path class="reseau-lien reseau-lien--org" pathLength="1" style="--i:6" d="M0 0 Q29.7 52.8 87.7 79.0"/><circle class="reseau-noeud reseau-noeud--org" cx="87.7" cy="79.0" r="7" style="--i:6"/><path class="reseau-lien reseau-lien--org" pathLength="1" style="--i:7" d="M0 0 Q18.8 61.3 55.4 104.2"/><circle class="reseau-noeud reseau-noeud--org" cx="55.4" cy="104.2" r="7" style="--i:7"/><path class="reseau-lien reseau-lien--org" pathLength="1" style="--i:8" d="M0 0 Q5.6 65.6 16.4 116.9"/><circle class="reseau-noeud reseau-noeud--org" cx="16.4" cy="116.9" r="7" style="--i:8"/><path class="reseau-lien reseau-lien--org" pathLength="1" style="--i:9" d="M0 0 Q-8.3 65.1 -24.5 115.4"/><circle class="reseau-noeud reseau-noeud--org" cx="-24.5" cy="115.4" r="7" style="--i:9"/><path class="reseau-lien reseau-lien--org" pathLength="1" style="--i:10" d="M0 0 Q-21.2 59.9 -62.5 100.1"/><circle class="reseau-noeud reseau-noeud--org" cx="-62.5" cy="100.1" r="7" style="--i:10"/><path class="reseau-lien reseau-lien--org" pathLength="1" style="--i:11" d="M0 0 Q-31.5 50.6 -93.0 72.6"/><circle class="reseau-noeud reseau-noeud--org" cx="-93.0" cy="72.6" r="7" style="--i:11"/>
+        <text class="reseau-legende" x="0" y="-136" text-anchor="middle">Appareils</text>
+        <text class="reseau-legende reseau-legende--org" x="0" y="150" text-anchor="middle">Démarches en ligne</text>
+        <circle class="reseau-centre" r="30"/>
+        <text class="reseau-vous" y="7" text-anchor="middle">vous</text>
+      </svg>
+    </div>
+  </div>
+</section>
+<section class="fin sombre" id="fin">
+  <div class="conteneur fin-grille">
+    <div class="fin-texte">
+      <p class="surtitre"><span class="prise" data-prise="secteur" aria-hidden="true"><svg viewBox="0 0 44 24" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="3" width="22" height="18" rx="5"/><circle cx="22" cy="12" r="1.8"/><circle cx="29" cy="12" r="1.8"/><path d="M2 12h12"/></g><circle class="prise-voyant" cx="41" cy="12" r="2.2"/></svg></span><span>Autre chose ?</span></p>
+      <h2 data-anime>Votre besoin n’est pas dans la liste ?</h2>
+      <p data-anime>La liste n’est pas exhaustive : n’hésitez pas à me contacter.</p>
+      <p class="fin-numero" data-anime><a href="tel:+33683615598">06 83 61 55 98</a></p>
+      <p class="fin-actions" data-anime>
+        <a class="bouton bouton--clair" href="tel:+33683615598" data-magnetique data-branchement><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3h3l1.6 4.2-2 1.4a11 11 0 0 0 5.2 5.2l1.4-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3z"/></g></svg><span>Appeler Marco</span></a>
+        <a href="/rendez-vous#demande" class="bouton bouton--contour" data-libelle="Rendez-⁠vous">Demander un devis gratuit</a>
+      </p>
+    </div>
+    <div class="fin-visuel" data-visuel aria-hidden="true">
+      <svg viewBox="0 0 320 320" focusable="false">
+        <rect class="fin-socle" x="196" y="110" width="92" height="100" rx="18"/><circle class="fin-trou" cx="230" cy="148" r="6"/><circle class="fin-trou" cx="254" cy="148" r="6"/><circle class="fin-voyant" cx="242" cy="186" r="5"/>
+        <path class="fin-cable" pathLength="1" d="M-10 290 C 60 290 40 160 120 160 L150 160"/>
+        <g class="fin-prise"><rect x="150" y="142" width="40" height="36" rx="8"/><path d="M190 152h14M190 168h14"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <a class="pied-logo" href="/" data-libelle="Accueil"><img src="/assets/images/logo.svg" alt="marcordi, aidant numérique : accueil" width="395" height="112"></a>
+      <p>Aidant numérique : installation, assistance et dépannage informatique et multimédia, accompagnement aux démarches administratives en ligne.</p>
+    </div>
+    <div>
+      <p class="pied-titre">Contact</p>
+      <ul>
+        <li><a class="lien-fil" href="tel:+33683615598"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3h3l1.6 4.2-2 1.4a11 11 0 0 0 5.2 5.2l1.4-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3z"/></g></svg><span>06 83 61 55 98</span></a></li>
+        <li><a class="lien-fil" href="mailto:marco@marcordi.fr"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></g></svg><span>marco@marcordi.fr</span></a></li>
+        <li class="pied-ligne"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6.2-6.5-11A6.5 6.5 0 0 1 18.5 10c0 4.8-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></g></svg><span>Marigny-⁠Marmande (37), rayon de 25 km</span></li>
+      </ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" class="lien-fil" data-libelle="Accueil">Accueil</a></li><li><a href="/prestations" class="lien-fil" data-libelle="Prestations" aria-current="page">Prestations</a></li><li><a href="/tarifs" class="lien-fil" data-libelle="Tarifs">Tarifs</a></li><li><a href="/a-propos" class="lien-fil" data-libelle="À propos">À propos</a></li><li><a href="/rendez-vous" class="lien-fil" data-libelle="Rendez-⁠vous">Rendez-⁠vous</a></li><li><a href="/mentions-legales" class="lien-fil" data-libelle="Mentions légales">Mentions légales</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Suivre marcordi</p>
+      <ul><li><a class="lien-fil" href="https://www.instagram.com/marcordi.fr/" target="_blank" rel="noopener">Instagram<svg class="picto picto--petit" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></g></svg><span class="visuellement-cache"> (nouvel onglet)</span></a></li><li><a class="lien-fil" href="https://www.facebook.com/marcordi.fr/" target="_blank" rel="noopener">Facebook<svg class="picto picto--petit" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></g></svg><span class="visuellement-cache"> (nouvel onglet)</span></a></li><li><a class="lien-fil" href="https://www.linkedin.com/company/marcordi/" target="_blank" rel="noopener">LinkedIn<svg class="picto picto--petit" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></g></svg><span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+      <p class="pied-titre pied-titre--second">Confort de lecture</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a class="lien-fil" href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : les informations marquées « à compléter » seront fournies par marcordi.</p><p>© marcordi · SIRET 900 834 433 00022</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton" href="tel:+33683615598"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3h3l1.6 4.2-2 1.4a11 11 0 0 0 5.2 5.2l1.4-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3z"/></g></svg><span>Appeler</span></a>
+  <a class="bouton bouton--contour" href="/rendez-vous#demande" data-libelle="Rendez-⁠vous">Rendez-⁠vous</a>
+</div>
+</body>
+</html>

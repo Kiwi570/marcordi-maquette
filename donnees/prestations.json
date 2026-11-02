@@ -1,0 +1,92 @@
+[
+  {
+    "id": "prise-en-main",
+    "famille": "informatique",
+    "titre": "Prise en main d’un nouveau matériel",
+    "texte": "Un nouvel ordinateur ou un nouveau smartphone : je vous accompagne pour le mettre en route et vous l’approprier.",
+    "image": "grok/prestation-prise-en-main",
+    "cadrage": "60% 45%",
+    "alt": "Mains qui sortent un smartphone neuf de sa boîte"
+  },
+  {
+    "id": "nettoyage",
+    "famille": "informatique",
+    "titre": "Nettoyage, sécurisation, optimisation, réparation",
+    "texte": "Un appareil lent, encombré ou qui fait des siennes : je le nettoie, le sécurise, l’optimise et le répare.",
+    "image": "grok/prestation-nettoyage",
+    "cadrage": "55% 60%",
+    "alt": "Clavier d’ordinateur dépoussiéré au pinceau"
+  },
+  {
+    "id": "installation",
+    "famille": "informatique",
+    "titre": "Installation, réinitialisation, mise à jour",
+    "texte": "Système d’exploitation et logiciels internes des appareils (firmware), sur Windows comme sur macOS.",
+    "image": "grok/prestation-installation",
+    "cadrage": "55% 65%",
+    "alt": "Mains sur le clavier d’un ordinateur portable, à la tombée du jour"
+  },
+  {
+    "id": "recuperation",
+    "famille": "informatique",
+    "titre": "Récupération de données",
+    "texte": "Photos, documents : je tente de récupérer vos fichiers. Le résultat dépend de l’état de l’appareil et ne peut pas être garanti.",
+    "image": "grok/prestation-recuperation",
+    "cadrage": "55% 55%",
+    "alt": "Disque dur externe et clé USB posés près d’une boîte en carton"
+  },
+  {
+    "id": "multimedia",
+    "famille": "informatique",
+    "titre": "Multimédia : smartphone, TV, box",
+    "texte": "Installation, assistance et dépannage de vos appareils multimédias : smartphone, télévision, box…",
+    "image": "grok/prestation-tv-box",
+    "cadrage": "55% 60%",
+    "alt": "Box internet et télécommande sur un meuble de télévision"
+  },
+  {
+    "id": "cv",
+    "famille": "administratif",
+    "titre": "Conception graphique de CV",
+    "texte": "Un CV clair et soigné, mis en forme avec vous.",
+    "image": "grok/prestation-cv",
+    "cadrage": "55% 55%",
+    "alt": "Feuille blanche, stylo et lunettes sur un bureau"
+  },
+  {
+    "id": "demarches",
+    "famille": "administratif",
+    "titre": "Démarches administratives en ligne",
+    "texte": "MSA, ameli, CAF, France Travail, ANTS, énergie, opérateurs téléphoniques… je vous accompagne dans vos démarches dématérialisées.",
+    "image": "grok/prestation-demarches",
+    "cadrage": "40% 60%",
+    "alt": "Lunettes posées sur un ordinateur fermé, près d’une tasse et d’enveloppes"
+  },
+  {
+    "id": "outils-collaboratifs",
+    "famille": "administratif",
+    "titre": "Assistance aux outils collaboratifs",
+    "texte": "Je vous aide à prendre en main les outils pour travailler à plusieurs.",
+    "image": "grok/prestation-outils-collaboratifs",
+    "cadrage": "45% 50%",
+    "alt": "Deux ordinateurs portables face à face sur une table de réunion"
+  },
+  {
+    "id": "redaction",
+    "famille": "administratif",
+    "titre": "Aide à la rédaction",
+    "texte": "Je vous aide à rédiger vos textes et vos courriers.",
+    "image": "grok/prestation-redaction",
+    "cadrage": "40% 65%",
+    "alt": "Carnet ouvert et stylo plume près d’une tasse de thé"
+  },
+  {
+    "id": "veille",
+    "famille": "administratif",
+    "titre": "Veille documentaire et recherche d’information",
+    "texte": "Trouver la bonne information et la garder à jour.",
+    "image": "grok/prestation-veille",
+    "cadrage": "40% 60%",
+    "alt": "Pile de livres et de journaux à côté d’une tablette"
+  }
+]

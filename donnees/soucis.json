@@ -1,0 +1,42 @@
+[
+  {
+    "id": "lent",
+    "texte": "Mon ordinateur est devenu lent",
+    "prestation": "nettoyage"
+  },
+  {
+    "id": "nouveau",
+    "texte": "J’ai un nouveau téléphone ou un nouvel ordinateur",
+    "prestation": "prise-en-main"
+  },
+  {
+    "id": "box",
+    "texte": "Ma box ou ma télé ne fonctionne plus",
+    "prestation": "multimedia"
+  },
+  {
+    "id": "maj",
+    "texte": "Une mise à jour ou une réinstallation à faire",
+    "prestation": "installation"
+  },
+  {
+    "id": "photos",
+    "texte": "J’ai peur d’avoir perdu mes photos",
+    "prestation": "recuperation"
+  },
+  {
+    "id": "demarche",
+    "texte": "Je bloque sur une démarche en ligne",
+    "prestation": "demarches"
+  },
+  {
+    "id": "cv",
+    "texte": "Je dois refaire mon CV",
+    "prestation": "cv"
+  },
+  {
+    "id": "equipe",
+    "texte": "Nous voulons travailler à plusieurs",
+    "prestation": "outils-collaboratifs"
+  }
+]

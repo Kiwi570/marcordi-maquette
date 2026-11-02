@@ -1,0 +1,290 @@
+[
+ {
+  "source": "recu/grok/accueil-ouverture.jpg",
+  "nom": "grok/accueil-ouverture",
+  "cadrage": [
+   70,
+   55
+  ]
+ },
+ {
+  "source": "recu/grok/prestations-ouverture.jpg",
+  "nom": "grok/prestations-ouverture",
+  "cadrage": [
+   72,
+   60
+  ]
+ },
+ {
+  "source": "recu/grok/tarifs-ouverture.jpg",
+  "nom": "grok/tarifs-ouverture",
+  "cadrage": [
+   72,
+   55
+  ]
+ },
+ {
+  "source": "recu/grok/a-propos-ouverture.jpg",
+  "nom": "grok/a-propos-ouverture",
+  "cadrage": [
+   65,
+   55
+  ]
+ },
+ {
+  "source": "recu/grok/rendez-vous-ouverture.jpg",
+  "nom": "grok/rendez-vous-ouverture",
+  "cadrage": [
+   65,
+   60
+  ]
+ },
+ {
+  "source": "recu/grok/mentions-ouverture.jpg",
+  "nom": "grok/mentions-ouverture",
+  "cadrage": [
+   65,
+   62
+  ]
+ },
+ {
+  "source": "recu/grok/404-ouverture.jpg",
+  "nom": "grok/404-ouverture",
+  "cadrage": [
+   68,
+   60
+  ]
+ },
+ {
+  "source": "recu/grok/accueil-marco-fond.jpg",
+  "nom": "grok/accueil-marco-fond",
+  "cadrage": [
+   50,
+   50
+  ]
+ },
+ {
+  "source": "recu/grok/accueil-ouverture-mobile.jpg",
+  "nom": "grok/accueil-ouverture-mobile",
+  "cadrage": [
+   60,
+   75
+  ]
+ },
+ {
+  "source": "recu/grok/prestations-ouverture-mobile.jpg",
+  "nom": "grok/prestations-ouverture-mobile",
+  "cadrage": [
+   45,
+   72
+  ]
+ },
+ {
+  "source": "recu/grok/tarifs-ouverture-mobile.jpg",
+  "nom": "grok/tarifs-ouverture-mobile",
+  "cadrage": [
+   45,
+   65
+  ]
+ },
+ {
+  "source": "recu/grok/a-propos-ouverture-mobile.jpg",
+  "nom": "grok/a-propos-ouverture-mobile",
+  "cadrage": [
+   40,
+   70
+  ]
+ },
+ {
+  "source": "recu/grok/rendez-vous-ouverture-mobile.jpg",
+  "nom": "grok/rendez-vous-ouverture-mobile",
+  "cadrage": [
+   55,
+   72
+  ]
+ },
+ {
+  "source": "recu/grok/mentions-ouverture-mobile.jpg",
+  "nom": "grok/mentions-ouverture-mobile",
+  "cadrage": [
+   60,
+   70
+  ]
+ },
+ {
+  "source": "recu/grok/404-ouverture-mobile.jpg",
+  "nom": "grok/404-ouverture-mobile",
+  "cadrage": [
+   30,
+   75
+  ]
+ },
+ {
+  "source": "recu/grok/accueil-informatique.jpg",
+  "nom": "grok/accueil-informatique",
+  "cadrage": [
+   60,
+   65
+  ]
+ },
+ {
+  "source": "recu/grok/accueil-demarches.jpg",
+  "nom": "grok/accueil-demarches",
+  "cadrage": [
+   55,
+   45
+  ]
+ },
+ {
+  "source": "recu/grok/accueil-domicile.jpg",
+  "nom": "grok/accueil-domicile",
+  "cadrage": [
+   45,
+   60
+  ]
+ },
+ {
+  "source": "recu/grok/accueil-distance.jpg",
+  "nom": "grok/accueil-distance",
+  "cadrage": [
+   55,
+   55
+  ]
+ },
+ {
+  "source": "recu/grok/accueil-tiers-lieu.jpg",
+  "nom": "grok/accueil-tiers-lieu",
+  "cadrage": [
+   50,
+   55
+  ]
+ },
+ {
+  "source": "recu/grok/accueil-intervention.jpg",
+  "nom": "grok/accueil-intervention",
+  "cadrage": [
+   40,
+   45
+  ]
+ },
+ {
+  "source": "recu/grok/accueil-faq.jpg",
+  "nom": "grok/accueil-faq",
+  "cadrage": [
+   45,
+   65
+  ]
+ },
+ {
+  "source": "recu/grok/prestation-prise-en-main.jpg",
+  "nom": "grok/prestation-prise-en-main",
+  "cadrage": [
+   60,
+   45
+  ]
+ },
+ {
+  "source": "recu/grok/prestation-nettoyage.jpg",
+  "nom": "grok/prestation-nettoyage",
+  "cadrage": [
+   55,
+   60
+  ]
+ },
+ {
+  "source": "recu/grok/prestation-installation.jpg",
+  "nom": "grok/prestation-installation",
+  "cadrage": [
+   55,
+   65
+  ]
+ },
+ {
+  "source": "recu/grok/prestation-recuperation.jpg",
+  "nom": "grok/prestation-recuperation",
+  "cadrage": [
+   55,
+   55
+  ]
+ },
+ {
+  "source": "recu/grok/prestation-tv-box.jpg",
+  "nom": "grok/prestation-tv-box",
+  "cadrage": [
+   55,
+   60
+  ]
+ },
+ {
+  "source": "recu/grok/prestation-cv.jpg",
+  "nom": "grok/prestation-cv",
+  "cadrage": [
+   55,
+   55
+  ]
+ },
+ {
+  "source": "recu/grok/prestation-demarches.jpg",
+  "nom": "grok/prestation-demarches",
+  "cadrage": [
+   40,
+   60
+  ]
+ },
+ {
+  "source": "recu/grok/prestation-outils-collaboratifs.jpg",
+  "nom": "grok/prestation-outils-collaboratifs",
+  "cadrage": [
+   45,
+   50
+  ]
+ },
+ {
+  "source": "recu/grok/prestation-redaction.jpg",
+  "nom": "grok/prestation-redaction",
+  "cadrage": [
+   40,
+   65
+  ]
+ },
+ {
+  "source": "recu/grok/prestation-veille.jpg",
+  "nom": "grok/prestation-veille",
+  "cadrage": [
+   40,
+   60
+  ]
+ },
+ {
+  "source": "recu/grok/tarifs-devis.jpg",
+  "nom": "grok/tarifs-devis",
+  "cadrage": [
+   45,
+   55
+  ]
+ },
+ {
+  "source": "recu/grok/a-propos-village.jpg",
+  "nom": "grok/a-propos-village",
+  "cadrage": [
+   40,
+   50
+  ]
+ },
+ {
+  "source": "recu/grok/rendez-vous-porte.jpg",
+  "nom": "grok/rendez-vous-porte",
+  "cadrage": [
+   50,
+   50
+  ]
+ },
+ {
+  "source": "recu/site/marco-portrait.png",
+  "nom": "marco-portrait",
+  "cadrage": [
+   50,
+   40
+  ]
+ }
+]

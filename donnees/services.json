@@ -1,0 +1,26 @@
+{
+  "appareils": [
+    "Ordinateur Windows",
+    "Ordinateur macOS",
+    "Smartphone",
+    "Télévision",
+    "Box internet"
+  ],
+  "organismes": [
+    "MSA",
+    "ameli",
+    "CAF",
+    "France Travail",
+    "ANTS",
+    "Fournisseurs d’énergie",
+    "Opérateurs téléphoniques"
+  ],
+  "jours": [
+    "Lundi",
+    "Mardi",
+    "Mercredi",
+    "Jeudi",
+    "Vendredi",
+    "Samedi"
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "commun": {
+    "navigation": "Navigation principale",
+    "menu": "Menu",
+    "fermer": "Fermer",
+    "menuContact": "Joindre Marco",
+    "actionEntete": "Rendez-vous",
+    "appeler": "Appeler",
+    "logoAccueil": "marcordi, aidant numérique : accueil",
+    "zone": "Chez vous dans un rayon de 25 km autour de Marigny-Marmande, ou à distance.",
+    "zoneCourt": "rayon de 25 km",
+    "contact": "Contact",
+    "suivre": "Suivre marcordi",
+    "nouvelOnglet": "(nouvel onglet)",
+    "piedTexte": "Aidant numérique : installation, assistance et dépannage informatique et multimédia, accompagnement aux démarches administratives en ligne.",
+    "calmeReduire": "Réduire les animations",
+    "calmeRetablir": "Rétablir les animations",
+    "calmeSysteme": "Animations réduites par le réglage de votre appareil",
+    "sommaire": "Sommaire",
+    "confort": "Confort de lecture",
+    "retourHaut": "Retour en haut",
+    "maquette": "Maquette : les informations marquées « à compléter » seront fournies par marcordi.",
+    "evitement": "Aller au contenu",
+    "mentionIa": "Illustration générée",
+    "pause": "Pause",
+    "lecture": "Lecture",
+    "demanderPrestation": "Demander cette prestation",
+    "voirDetail": "Voir le détail",
+    "rendezVous": "Demander un rendez-vous",
+    "devisGratuit": "Demander un devis gratuit",
+    "ecrire": "Écrire un e-mail",
+    "familles": {
+      "informatique": "Informatique et multimédia",
+      "administratif": "Administratif"
+    },
+    "zoneMessages": {
+      "centre": "Marigny-Marmande : c’est ici que je suis basé.",
+      "dedans": "{commune} : {km} km à vol d’oiseau, dans la zone. Je me déplace chez vous.",
+      "dehors": "{commune} : {km} km à vol d’oiseau, hors de la zone de déplacement. L’aide à distance reste possible ; pour un déplacement, appelez-moi.",
+      "inconnue": "Commune introuvable dans les environs : l’aide à distance reste possible ; appelez-moi pour un déplacement.",
+      "vide": "Tapez votre commune pour savoir si je me déplace chez vous."
+    },
+    "appelerMarco": "Appeler Marco"
+  },
+  "pages": {
+    "accueil": {
+      "titre": "marcordi : aidant numérique à Marigny-Marmande (37)",
+      "description": "Installation, assistance et dépannage informatique et multimédia, aide aux démarches en ligne. Chez vous dans un rayon de 25 km autour de Marigny-Marmande, ou à distance.",
+      "nav": "Accueil",
+      "partageAlt": "marcordi, aidant numérique : mains posées sur une tablette, sur une table de cuisine",
+      "accroche": "Je vous aide avec vos écrans et vos démarches."
+    },
+    "prestations": {
+      "titre": "Prestations : marcordi, aidant numérique",
+      "description": "Prise en main, nettoyage, réparation, mise à jour, récupération de données, multimédia, CV, démarches en ligne, rédaction : la liste des prestations de marcordi.",
+      "nav": "Prestations",
+      "partageAlt": "Prestations de marcordi : établi avec ordinateur, câbles et clé USB",
+      "accroche": "Ce que je fais pour vous"
+    },
+    "tarifs": {
+      "titre": "Tarifs : marcordi, aidant numérique",
+      "description": "Forfait express à 30 € déplacement compris, 25 € de l’heure de 1 h à 4 h, 20 € de l’heure au-delà. Devis gratuit sur demande.",
+      "nav": "Tarifs",
+      "partageAlt": "Tarifs de marcordi : bobine de fil de cuivre",
+      "accroche": "Des tarifs clairs, un devis gratuit"
+    },
+    "a-propos": {
+      "titre": "À propos : Marco Hubin, marcordi",
+      "description": "marcordi, c’est Marco Hubin, aidant numérique basé à Marigny-Marmande, en Indre-et-Loire. English spoken.",
+      "nav": "À propos",
+      "partageAlt": "À propos de marcordi : petite route de campagne en Touraine",
+      "accroche": "Marco, votre aidant numérique"
+    },
+    "rendez-vous": {
+      "titre": "Rendez-vous et contact : marcordi",
+      "description": "Appelez le 06 83 61 55 98, écrivez à marco@marcordi.fr ou demandez un rendez-vous : à domicile, à distance ou en tiers-lieu.",
+      "nav": "Rendez-vous",
+      "partageAlt": "Contact marcordi : téléphone et carnet sur une table",
+      "accroche": "Parlons de votre souci"
+    },
+    "mentions-legales": {
+      "titre": "Mentions légales et confidentialité : marcordi",
+      "description": "Éditeur, hébergeur, crédits et politique de confidentialité du site marcordi.",
+      "nav": "Mentions légales",
+      "partageAlt": "Mentions légales de marcordi",
+      "accroche": "Mentions légales"
+    },
+    "404": {
+      "titre": "Page introuvable : marcordi",
+      "description": "Cette page n’existe pas ou plus.",
+      "nav": "Page introuvable",
+      "partageAlt": "Page introuvable",
+      "accroche": "Page introuvable"
+    }
+  },
+  "accueil": {
+    "hero": {
+      "surtitre": "Aidant numérique à Marigny-Marmande",
+      "ligne1": "Je vous aide",
+      "ligne2": "avec vos écrans",
+      "ligne3": "et vos démarches.",
+      "appeler": "Appeler Marco",
+      "info": "Chez vous dans un rayon de 25 km autour de Marigny-Marmande, ou à distance.",
+      "texte": "Installation, assistance et dépannage informatique et multimédia, accompagnement aux démarches en ligne. Devis gratuit sur demande.",
+      "alt": "Mains d’une personne âgée posées sur une tablette, sur une table de cuisine au soleil"
+    },
+    "souci": {
+      "surtitre": "Par où commencer",
+      "titre": "Quel est votre souci ?",
+      "texte": "Touchez la phrase qui vous ressemble : je vous dis ce que je fais et combien ça coûte.",
+      "groupe": "Votre souci",
+      "famille": "Prestation",
+      "prix": "Prix : forfait express de 30 €, déplacement compris, pour moins d’une heure ; au-delà, selon la grille. Devis gratuit.",
+      "noeud": "Nœud de câbles : le fil du souci choisi se démêle"
+    },
+    "familles": {
+      "surtitre": "Ce que je fais",
+      "titre": "Deux familles de services",
+      "infoTexte": "Windows et macOS, smartphone, télévision, box.",
+      "adminTexte": "Démarches dématérialisées, CV, rédaction, recherche d’information.",
+      "infoAlt": "Mains qui branchent un câble sur un ordinateur portable",
+      "adminAlt": "Mains tenant un smartphone au-dessus d’enveloppes kraft",
+      "tout": "Toutes les prestations"
+    },
+    "facons": {
+      "surtitre": "Où je vous aide",
+      "titre": "Trois façons d’intervenir",
+      "domicile": "À domicile",
+      "domicileTexte": "Je viens chez vous, dans un rayon de 25 km autour de Marigny-Marmande.",
+      "domicileAlt": "Salon d’une maison ancienne aux murs de pierre claire, un ordinateur sur la table",
+      "distance": "À distance",
+      "distanceTexte": "Sans déplacement : je vous aide en ligne, où que se trouve votre appareil.",
+      "distanceAlt": "Smartphone sur un support, casque et tasse de thé sous une lampe",
+      "tiers": "En tiers-lieu",
+      "tiersTexte": "Rendez-vous dans un lieu partagé. Lieux à compléter.",
+      "tiersAlt": "Grande table en bois dans une salle lumineuse de village, deux personnes au fond"
+    },
+    "zone": {
+      "surtitre": "Ma zone",
+      "titre": "Chez vous, dans un rayon de 25 km",
+      "texte": "Autour de Marigny-Marmande, en Indre-et-Loire et dans la Vienne voisine : {n} communes à moins de 25 km.",
+      "label": "Votre commune",
+      "placeholder": "Exemple : Richelieu",
+      "verifier": "Vérifier",
+      "invite": "Tapez votre commune pour savoir si Marco se déplace chez vous.",
+      "note": "Distances à vol d’oiseau depuis le centre de Marigny-Marmande, à confirmer pour les communes en limite de zone. Données des communes : voir les mentions légales.",
+      "carte": "Carte des communes autour de Marigny-Marmande : {n} communes dans le cercle de 25 km",
+      "km": "25 km",
+      "legendeDedans": "Je me déplace (moins de 25 km)",
+      "legendeDehors": "Hors zone : aide à distance"
+    },
+    "tarifs": {
+      "surtitre": "Mes tarifs",
+      "titre": "Des prix simples, un devis gratuit",
+      "note": "Tarifs indicatifs : ils ne tiennent pas lieu de devis.",
+      "estimer": "Estimer le prix",
+      "cachet": "Devis gratuit",
+      "cachet2": "sur demande"
+    },
+    "marco": {
+      "surtitre": "Qui suis-je",
+      "titre": "marcordi, c’est Marco Hubin",
+      "texte": "Basé à Marigny-Marmande, en Indre-et-Loire, j’interviens en présentiel sur les communes aux alentours, dans un rayon de 25 km.",
+      "devis": "Devis gratuit sur demande",
+      "anglais": "English spoken",
+      "lien": "Découvrir ma démarche",
+      "alt": "Portrait de Marco Hubin, souriant, en extérieur",
+      "fondAlt": "Campagne de Touraine au crépuscule"
+    },
+    "etapes": {
+      "surtitre": "Comment ça se passe",
+      "titre": "Quatre étapes, sans surprise",
+      "alt": "Deux personnes à une table de cuisine, l’une montre l’écran d’un ordinateur",
+      "e1": "Vous m’expliquez votre souci",
+      "e1t": "Par téléphone, par e-mail ou avec le formulaire.",
+      "e2": "Devis gratuit",
+      "e2t": "Sur demande, avant de commencer.",
+      "e3": "J’interviens",
+      "e3t": "Chez vous dans un rayon de 25 km, en tiers-lieu ou à distance.",
+      "e4": "Vous réglez le montant convenu",
+      "e4t": "Tarifs indicatifs. Moyens de paiement : à compléter."
+    },
+    "faq": {
+      "surtitre": "Questions fréquentes",
+      "titre": "Vos questions",
+      "alt": "Tasse de thé et smartphone sur un rebord de fenêtre en pierre"
+    },
+    "fin": {
+      "surtitre": "On en parle ?",
+      "titre": "Un souci ? Appelez Marco.",
+      "texte": "Pour une information, une intervention ou un diagnostic."
+    }
+  },
+  "prestations": {
+    "tete": {
+      "surtitre": "Prestations",
+      "titre": "Ce que je fais pour vous",
+      "texte": "Voici une liste non exhaustive des prestations que je propose. Si votre besoin n’est pas référencé, n’hésitez pas à me contacter.",
+      "info": "Windows et macOS · smartphone, TV, box · démarches en ligne",
+      "alt": "Établi en bois avec un ordinateur portable, des câbles, une clé USB et des tournevis de précision"
+    },
+    "liste": {
+      "surtitre": "La liste",
+      "titre": "Les prestations",
+      "filtres": "Filtrer les prestations",
+      "tout": "Tout voir",
+      "compte": "{n} prestations affichées",
+      "compteUn": "1 prestation affichée",
+      "tuileTitre": "Un doute sur la bonne prestation ?",
+      "tuileTexte": "Appelez-moi : on en parle avant, et le devis est gratuit."
+    },
+    "services": {
+      "surtitre": "Appareils et services",
+      "titre": "Vos appareils, vos démarches",
+      "texte": "Sur ordinateur comme sur téléphone, et pour les démarches dématérialisées du quotidien.",
+      "appareils": "Appareils",
+      "organismes": "Démarches en ligne",
+      "visuel": "Schéma : vos appareils et vos démarches reliés à un même fil"
+    },
+    "fin": {
+      "surtitre": "Autre chose ?",
+      "titre": "Votre besoin n’est pas dans la liste ?",
+      "texte": "La liste n’est pas exhaustive : n’hésitez pas à me contacter."
+    }
+  },
+  "tarifs": {
+    "tete": {
+      "surtitre": "Tarifs",
+      "titre": "Des tarifs clairs",
+      "texte": "Ces tarifs sont donnés à titre indicatif et ne tiennent pas lieu de devis. Le devis est gratuit, sur demande.",
+      "estimer": "Estimer le prix",
+      "info": "Forfait express : 30 €, déplacement compris, pour moins d’une heure.",
+      "alt": "Bobine de fil de cuivre et câble avec sa prise sur un drap de lin"
+    },
+    "grille": {
+      "surtitre": "La grille",
+      "titre": "Trois niveaux selon la durée"
+    },
+    "estimateur": {
+      "surtitre": "Tirez le câble",
+      "titre": "Estimez le prix",
+      "texte": "Faites glisser la prise, ou utilisez les boutons, pour choisir la durée : le prix indicatif suit.",
+      "duree": "Durée de l’intervention",
+      "total": "Prix indicatif",
+      "detail": "Calcul",
+      "note": "Estimation indicative, qui ne tient pas lieu de devis : le tarif horaire du niveau s’applique à toute la durée, et 4 h exactement relèvent du niveau 3. À confirmer.",
+      "deplacement": "Déplacement compris dans le forfait express ; pour les niveaux 2 et 3, à confirmer.",
+      "demander": "Demander un devis pour cette durée",
+      "forfait": "forfait, déplacement compris",
+      "moins": "Retirer 30 minutes",
+      "plus": "Ajouter 30 minutes"
+    },
+    "devis": {
+      "surtitre": "Devis",
+      "titre": "Le devis est gratuit",
+      "texte": "Sur demande : expliquez votre souci par téléphone, par e-mail ou avec le formulaire.",
+      "paiement": "Moyens de paiement : à compléter.",
+      "alt": "Carnet fermé, stylo et petite calculatrice sur une table en bois"
+    }
+  },
+  "apropos": {
+    "tete": {
+      "surtitre": "À propos",
+      "titre": "Marco, votre aidant numérique",
+      "texte": "Aidant numérique, je vous assiste dans vos interactions avec vos appareils, dans votre vie de tous les jours comme dans vos démarches administratives.",
+      "appeler": "Appeler Marco",
+      "info": "Basé à Marigny-Marmande, Indre-et-Loire.",
+      "alt": "Petite route de campagne entre vignes et champs, au soleil couchant"
+    },
+    "demarche": {
+      "surtitre": "Ma démarche",
+      "titre": "Prendre soin de la fracture numérique",
+      "citation": "Après plusieurs années de soutien, j’ai décidé de prendre soin de la fracture numérique sur internet et sur mon territoire.",
+      "auteur": "Marco Hubin",
+      "texte": "marcordi, c’est Marco Hubin. J’interviens en présentiel sur les communes aux alentours, dans un rayon de 25 km. Consultez mes prestations pour connaître mon champ d’action.",
+      "alt": "Portrait de Marco Hubin, souriant, en extérieur",
+      "villageAlt": "Rue de village en pierre claire et toits d’ardoise, le matin"
+    },
+    "fiche": {
+      "surtitre": "En bref",
+      "titre": "marcordi en quelques lignes",
+      "nom": "Qui",
+      "nomV": "Marco Hubin, aidant numérique",
+      "lieu": "Où",
+      "lieuV": "Marigny-Marmande, Indre-et-Loire",
+      "zone": "Zone",
+      "zoneV": "Sur place dans un rayon de 25 km, à distance ailleurs",
+      "devis": "Devis",
+      "devisV": "Gratuit, sur demande",
+      "langues": "Langues",
+      "languesV": "Français, anglais",
+      "statut": "Statut",
+      "statutV": "Entreprise individuelle, SIRET 900 834 433 00022",
+      "carte": "Voir la carte de la zone",
+      "visuel": "Cercle de 25 km autour de Marigny-Marmande"
+    }
+  },
+  "rdv": {
+    "tete": {
+      "surtitre": "Rendez-vous et contact",
+      "titre": "Parlons de votre souci",
+      "texte": "Le plus simple : appelez-moi. Pour une information, une intervention ou un diagnostic, vous pouvez aussi écrire un e-mail ou remplir le formulaire.",
+      "appeler": "Appeler le 06 83 61 55 98",
+      "formulaire": "Remplir le formulaire",
+      "info": "Devis gratuit · à domicile, à distance ou en tiers-lieu",
+      "alt": "Smartphone et carnet ouvert sur une table près d’une fenêtre, un brin de lavande"
+    },
+    "form": {
+      "surtitre": "Demande de rendez-vous",
+      "titre": "En cinq petites étapes",
+      "deroule": "Où, votre souci, votre commune, vos disponibilités, vos coordonnées. Je vous rappelle pour fixer l’heure.",
+      "etape": "Étape {n} sur 5",
+      "suivant": "Étape suivante",
+      "precedent": "Étape précédente",
+      "e1": "Où souhaitez-vous être aidé ?",
+      "domicile": "À domicile",
+      "domicileAide": "Dans un rayon de 25 km",
+      "tiers": "En tiers-lieu",
+      "tiersAide": "Lieu à convenir",
+      "distance": "À distance",
+      "distanceAide": "Sans déplacement",
+      "e2": "Votre souci",
+      "prestation": "Prestation",
+      "autre": "Autre besoin, ou je ne sais pas",
+      "e3": "Votre commune",
+      "commune": "Commune",
+      "communeAide": "Pour vérifier la zone de déplacement (facultatif à distance).",
+      "e4": "Vos disponibilités",
+      "jours": "Jours qui vous conviennent",
+      "moments": "Moments de la journée",
+      "matin": "Matin",
+      "apresmidi": "Après-midi",
+      "rappel": "Je vous rappelle pour convenir de l’heure : aucun créneau n’est réservé en ligne.",
+      "e5": "Vos coordonnées",
+      "prenom": "Prénom",
+      "nom": "Nom",
+      "tel": "Téléphone",
+      "email": "E-mail (facultatif)",
+      "message": "Votre message (facultatif)",
+      "donnees": "Vos données servent seulement à répondre à votre demande. <a href=\"/mentions-legales#confidentialite\">Politique de confidentialité</a> (à compléter).",
+      "envoyer": "Envoyer la demande",
+      "simule": "Maquette : la demande est simulée, rien n’est envoyé.",
+      "envoye": "Demande simulée : rien n’a été envoyé. Sur le site final, elle m’arrivera et je vous rappellerai.",
+      "recap": "Votre demande",
+      "recapOu": "Où",
+      "recapSouci": "Souci",
+      "recapCommune": "Commune",
+      "recapDispo": "Disponibilités",
+      "recapEstimation": "Estimation",
+      "recapVide": "À choisir",
+      "estimation": "{duree} : {prix} (indicatif)",
+      "erreurCommune": "Indiquez votre commune pour vérifier la zone de déplacement.",
+      "choisir": "Choisissez dans la liste",
+      "erreurPrestation": "Choisissez une prestation, ou « Autre besoin, ou je ne sais pas »."
+    },
+    "coord": {
+      "surtitre": "Coordonnées",
+      "titre": "Ou directement",
+      "telephone": "Téléphone",
+      "email": "E-mail",
+      "zone": "Zone",
+      "reseaux": "Réseaux",
+      "alt": "Porte d’entrée en bois entrouverte sur un intérieur éclairé"
+    }
+  },
+  "mentions": {
+    "titre": "Mentions légales et confidentialité",
+    "texte": "Maquette : les informations marquées « à compléter » seront fournies par marcordi.",
+    "alt": "Bureau rangé avec une lampe et une pile de chemises cartonnées",
+    "fiche": {
+      "titre": "À fournir par marcordi",
+      "texte": "Adresse de l’entreprise · directeur de la publication · moyens de paiement · tiers-lieux utilisés · politique de confidentialité · horaires si souhaités · portrait en plus grande taille · fichier source du logo · comptes de réseaux sociaux à confirmer."
+    },
+    "editeur": {
+      "titre": "Éditeur",
+      "texte": "marcordi, entreprise individuelle de Marco Hubin. SIRET 900 834 433 00022. Adresse : à compléter. Directeur de la publication : Marco Hubin, à confirmer. Contact : 06 83 61 55 98, marco@marcordi.fr."
+    },
+    "hebergeur": {
+      "titre": "Hébergeur",
+      "texte": "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis."
+    },
+    "credits": {
+      "titre": "Crédits",
+      "texte": "Logo et portrait : marcordi. Les images marquées « Illustration générée » ont été créées par intelligence artificielle (Grok) : elles ne montrent ni des clients ni des lieux réels. Polices Fraunces, Atkinson Hyperlegible et Figtree (licence SIL Open Font License). Données des communes : geo.api.gouv.fr (Etalab)."
+    },
+    "confidentialite": {
+      "titre": "Confidentialité",
+      "texte": "Politique de confidentialité à compléter (RGPD) : données recueillies par le formulaire, finalité, durée de conservation, droits d’accès, de rectification et d’effacement, contact. Cette maquette ne pose aucun cookie de mesure d’audience ; elle mémorise seulement, dans votre navigateur, votre choix d’animations."
+    }
+  },
+  "introuvable": {
+    "surtitre": "Erreur 404",
+    "titre": "Cette page s’est débranchée.",
+    "texte": "Elle n’existe pas ou plus. Rebranchez-vous sur l’accueil, ou appelez-moi.",
+    "retour": "Rebrancher sur l’accueil",
+    "alt": "Câble débranché qui pend au bord d’une table en bois"
+  }
+}

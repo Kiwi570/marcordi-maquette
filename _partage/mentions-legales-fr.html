@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="/assets/css/socle.css"><link rel="stylesheet" href="/assets/css/site.css">
+<style>:root{--fond:#F3EEE4;--texte:#1D2125}
+html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:var(--fond);color:var(--texte)}
+.carte{display:grid;grid-template-columns:600px 600px;width:1200px;height:630px}
+.carte-texte{display:flex;flex-direction:column;justify-content:space-between;padding:60px 56px 56px 64px;position:relative}
+.carte-texte .logo{width:250px;height:auto}
+.carte-titre{font-family:var(--police-titres);font-weight:600;font-size:60px;line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.01em}
+.carte-pied{display:flex;align-items:center;gap:16px;margin:0;font-size:22px;font-weight:700;white-space:nowrap}
+.carte-pied span{display:block;width:64px;height:6px;border-radius:3px;background:#C2662F}
+.carte-image{background:center/cover no-repeat;position:relative}
+.carte-image::after{content:'Illustration générée';position:absolute;right:14px;bottom:14px;padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.66);color:#fff;font:600 15px/1.3 var(--police-texte)}</style>
+</head><body>
+<div class="carte">
+  <div class="carte-texte">
+    <img class="logo" src="/assets/images/logo.svg" alt="">
+    <p class="carte-titre">Mentions légales</p>
+    <p class="carte-pied"><span></span>06 83 61 55 98 · Marigny-Marmande</p>
+  </div>
+  <div class="carte-image" style="background-image:url('/assets/images/grok/mentions-ouverture-1168.webp')"></div>
+</div>
+</body></html>

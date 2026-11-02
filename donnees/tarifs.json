@@ -1,0 +1,32 @@
+[
+  {
+    "id": "express",
+    "niveau": "Niveau 1",
+    "nom": "Forfait express",
+    "duree": "Moins d’une heure",
+    "prix": 30,
+    "unite": "forfait",
+    "note": "Déplacement compris",
+    "longueur": 0.28
+  },
+  {
+    "id": "n2",
+    "niveau": "Niveau 2",
+    "nom": "De 1 h à 4 h",
+    "duree": "De 1 h à 4 h",
+    "prix": 25,
+    "unite": "de l’heure",
+    "note": "Tarif horaire",
+    "longueur": 0.62
+  },
+  {
+    "id": "n3",
+    "niveau": "Niveau 3",
+    "nom": "4 h et plus",
+    "duree": "4 h et plus",
+    "prix": 20,
+    "unite": "de l’heure",
+    "note": "Tarif horaire, à partir de 4 h",
+    "longueur": 1
+  }
+]

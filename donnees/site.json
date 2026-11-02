@@ -1,0 +1,25 @@
+{
+  "nom": "marcordi",
+  "adresse": "https://marcordi-maquette.vercel.app",
+  "siteActuel": "marcordi.fr",
+  "version": 1,
+  "langues": ["fr"],
+  "navigation": ["accueil", "prestations", "tarifs", "a-propos", "rendez-vous"],
+  "actionEntete": { "page": "rendez-vous", "ancre": "demande" },
+  "couleurs": { "fond": "#F3EEE4", "texte": "#1D2125", "voile": "#1D2125", "ouverture": "#F3EEE4", "menu": "#F3EEE4", "theme": "#F3EEE4" },
+  "contact": {
+    "telephone": "06 83 61 55 98",
+    "telephoneLien": "+33683615598",
+    "email": "marco@marcordi.fr",
+    "adresse": "Marigny-Marmande (37)",
+    "siret": "900 834 433 00022"
+  },
+  "reseaux": [
+    { "nom": "Instagram", "url": "https://www.instagram.com/marcordi.fr/" },
+    { "nom": "Facebook", "url": "https://www.facebook.com/marcordi.fr/" },
+    { "nom": "LinkedIn", "url": "https://www.linkedin.com/company/marcordi/" }
+  ],
+  "polices": ["/assets/fonts/fraunces-600.woff2", "/assets/fonts/atkinson-400.woff2"],
+  "imagePartage": "grok/accueil-ouverture-1168.webp",
+  "curseur": true
+}

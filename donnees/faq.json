@@ -1,0 +1,38 @@
+[
+  {
+    "id": "domicile",
+    "q": "Venez-vous chez moi ?",
+    "r": "Oui, dans un rayon de 25 km autour de Marigny-Marmande. Vérifiez votre commune sur la carte de la zone."
+  },
+  {
+    "id": "distance",
+    "q": "Pouvez-vous m’aider à distance ?",
+    "r": "Oui : l’intervention peut aussi se faire à distance, ou dans un tiers-lieu."
+  },
+  {
+    "id": "prix",
+    "q": "Combien ça coûte ?",
+    "r": "Forfait express de 30 €, déplacement compris, pour moins d’une heure ; puis 25 € de l’heure de 1 h à 4 h, et 20 € de l’heure à partir de 4 h. Ces tarifs sont indicatifs et ne tiennent pas lieu de devis."
+  },
+  {
+    "id": "devis",
+    "q": "Le devis est-il payant ?",
+    "r": "Non : le devis est gratuit, sur demande."
+  },
+  {
+    "id": "liste",
+    "q": "Et si mon besoin n’est pas dans la liste ?",
+    "r": "La liste des prestations n’est pas exhaustive : appelez-moi ou écrivez-moi, et nous verrons ensemble."
+  },
+  {
+    "id": "paiement",
+    "q": "Comment régler ?",
+    "r": "Moyens de paiement : à compléter."
+  },
+  {
+    "id": "anglais",
+    "q": "Do you speak English?",
+    "r": "Yes: English spoken.",
+    "langue": "en"
+  }
+]
